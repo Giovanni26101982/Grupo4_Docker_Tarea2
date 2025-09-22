@@ -17,14 +17,37 @@
 
 ## 📖 Introducción
 
-En la presente tarea se documenta el desarrollo y entrega del laboratorio grupal fastapi-app, cuyo objetivo es construir, publicar y evaluar la seguridad de una imagen Dockerfile multistage, y automatizar el análisis de vulnerabilidades mediante GitHub Actions con Docker Scout.
+Esta implementación representa un entorno completo de WordPress containerizado, diseñado bajo principios de DevOps e infraestructura como código.
 
-El trabajo contempla: 
+Desplegar una instancia de WordPress 100% funcional y aislada que incluya:
 
-- Con base en el laboratorio de fastapi-app, deberan subir la imagen que le corresponde a su grupo y las aplicaciones a su repositorio de github 
-- Construir la imagen, subir a docker hub y realizar el análisis de vulnerabilidades con docker scout mediante un flujo de github actions
-- Realizar el reporte de lo ejecutado en el archivo Readme.md del repositorio. Dentro del reporte debe constar la captura de pantalla que muestre la subida de la imagen en su repositorio de Docker hub y los resultados del análisis de vulnerabilidades con docker scout.
-- Este trabajo se lo realizó de manera grupal y se encuentra publicado eb el repositorio git.
+- Servicio de aplicación: WordPress
+- Base de datos: MariaDB para persistencia de datos
+- Gestión de configuraciones: Variables de entorno centralizadas
+- Persistencia: Volúmenes para datos críticos
+
+Componentes Implementados
+1. Orquestación con Docker Compose
+   Coordinación automática de múltiples servicios interconectados, gestionando su ciclo de vida de manera unificada.
+   
+2. Aislamiento con Contenedores
+   
+   - WordPress: Servicio web independiente
+   - MariaDB: Motor de base de datos aislado
+   - Comunicación controlada: Red virtual dedicada
+
+3. Persistencia con Volúmenes Docker
+   - db_data:    # Base de datos (contenido, usuarios, configuraciones)
+   - wp_data:    # Archivos WordPress (themes, plugins, uploads)
+
+4. Seguridad con Variables de Entorno
+   
+   Implementación mediante archivo .env que permite:
+   
+   - Separación de configuración y código
+   - Seguridad de credenciales sensibles
+   - Portabilidad entre diferentes entornos
+   - Versionado seguro (excluido de repositorios)
 
 ---
 

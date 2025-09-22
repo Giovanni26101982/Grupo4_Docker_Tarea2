@@ -92,9 +92,29 @@ Volúmenes:
 
 <img width="698" height="641" alt="02" src="https://github.com/user-attachments/assets/8d056743-0238-4ae0-8ae4-be363b61eaea" />
 
+---
 
+3. **PASO 3: Verificamos los archivo a través de:**
+
+```bash
+tree –a
+```
+<img width="801" height="128" alt="03" src="https://github.com/user-attachments/assets/802bc5c7-1233-416f-b7d4-fd724f39c1b7" />
 
 ---
+
+4. **PASO 4: Flujo de ejecución:**
+
+Ejecutar:
+
+```bash
+docker-compose up -d
+```
+
+<img width="1012" height="308" alt="04" src="https://github.com/user-attachments/assets/e0cc6d15-8b03-4ac2-99c6-da70443f5182" />
+
+---
+
 
 ## ✅ Conclusiones - Recomendaciones
 

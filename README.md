@@ -31,8 +31,6 @@ El trabajo contempla:
 ## 🚀 Características
 - wordpress:6.5.2-php8.2-apache
 
-
-
 ---  
 
 ## 📂 Estructura
@@ -168,29 +166,32 @@ docker compose config
 
 ## ✅ Conclusiones - Recomendaciones
 
-1. El despliegue de la aplicación `FastAPI con Docker` se realizó exitosamente mediante la construcción de una imagen multistage, permitiendo una implementación más ligera y optimizada.
-   
-3. El análisis con Docker Scout evidenció que, aunque la aplicación funciona correctamente, existen vulnerabilidades conocidas en librerías del sistema base y dependencias de Python.
+Implementación con versión de imagen de wordpress sin inconvenientes.
 
-4. Para mitigar riesgos de seguridad se recomienda:
-   - Actualizar la librería starlette a la versión 0.47.2 o superior, corrigiendo fallas de recursos sin límite.
-   - Mantener actualizado el sistema base y explorar imágenes oficiales más recientes o variantes “slim” para reducir la superficie de ataque.
-   - Establecer un flujo de integración continua (CI/CD) que incluya escaneo automático de vulnerabilidades en cada build de imagen.
-  
-1. **Cumplimiento de los entregables y trazabilidad**  
-   Se construyó la imagen asociada al grupo, se publicó en Docker Hub y se registraron evidencias del proceso y del análisis de vulnerabilidades en el README.md.
+a)	Implementación:
+   - Despliegue: Todos los servicios se inicializaron correctamente
+   -	Arquitectura containerizada funcional: WordPress + MariaDB operando en contenedores aislados
+   -	Comunicación inter-servicios efectiva: Conexión WordPress → BD establecida sin errores
 
-1. **Impacto de la estrategia de construcción (single vs multistage)**  
-   El uso de `multistage` (cuando aplicó) permitió `reducir tamaño de imagen` y `disminuir la superficie de ataque`, mejorando tiempos de pull y despliegue. En escenarios simples, single puede ser suficiente, pero para producción la strategia multietapa mostró claras ventajas de seguridad y eficiencia.
+b)	Ventajas
+   -	Entorno 100% replicable
+   -	Control exacto de versiones de software
+   -	Servicios independientes pero conectados
 
-1. **Integración de seguridad en el ciclo de vida (Docker Scout + CI)**  
-   La automatización con `GitHub Actions` y `Docker Scout` aportó `visibilidad continua`. Esta práctica refuerza la cultura `DevSecOps` al detectar riesgos antes del despliegue.
+c)	Configuración Optima
+   -	Contraseñas y configuraciones aisladas en variables de entorno
+   -	Servicios optimizados para su función específica
+   -	Fácil actualización de versiones mediante cambio de tags
 
-1. **Trabajo individual con enfoque profesional**  
-   La organización para la ejecución del trabajo grupal, junto con la publicación en Docker Hub y auditoría automatizada, favoreció la `responsabilidad técnica` y la `calidad del entregable`, alineando el resultado con expectativas de acuerdo a lo solicitado.
-
-1. La actividad no solo cumplió los requerimientos, sino que consolidó un `pipeline reproducible y seguro` para empaquetar aplicaciones con Docker, `publicarlas` y `evaluar su postura de seguridad` de forma integral, dejando como valor final un repositorio verificable y un informe con evidencias claras del proceso.
-
-3. Finalmente, la práctica demuestra la importancia de no solo asegurar la funcionalidad del contenedor, sino también su seguridad y mantenimiento continuo en entornos de producción.
+d)	Métricas
+   -	Contenedores operativos: 2/2 servicios running
+   -	WordPress accesible vía puerto 80
+   -	Volúmenes creados y montados correctamente
+   -	Comunicación interna servicio db → wordpress
+   -	Servicios responden sin errores
+e)	Buenas prácticas implementadas
+   -	Uso de versiones específicas  Evita breaking changes
+   -	Variables de entorno  Separación configuración/código
+   -	Volúmenes nombrados  Persistencia garantizada
 
 ---

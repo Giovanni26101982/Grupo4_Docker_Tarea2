@@ -105,13 +105,63 @@ tree –a
 
 4. **PASO 4: Flujo de ejecución:**
 
-Ejecutar:
+- Ejecutar:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 <img width="1012" height="308" alt="04" src="https://github.com/user-attachments/assets/e0cc6d15-8b03-4ac2-99c6-da70443f5182" />
+
+-	Descarga las imágenes si no existen
+
+<img width="1182" height="712" alt="05" src="https://github.com/user-attachments/assets/1683cf28-75b3-4143-8d40-59cc885e8ce3" />
+
+-	Crea red virtual para comunicación entre servicios
+
+-	Crea volúmenes persistentes
+
+-	Inicia contenedor de BD con configuración
+
+-	Inicia WordPress que espera a que BD esté lista
+
+-	WordPress se conecta automáticamente a la BD
+
+-	Configuración automática
+
+-	WordPress detecta que es primera instalación
+
+-	Crea tablas en la base de datos
+
+-	Muestra pantalla de instalación inicial
+
+
+---
+
+5. **PASO 5: Una vez levantados los servicios se muestra la siguiente ventana a través del comando:**
+
+```bash
+docker compose ps
+```
+
+<img width="1587" height="832" alt="06" src="https://github.com/user-attachments/assets/05b8a7ed-c09e-4b90-a9dc-4ca49694c35c" />
+
+---
+
+
+6. **PASO 6: Verificamos que hayan tomado los valores correctos del archivo .env a través del siguiente comando:**
+
+```bash
+docker compose config
+```
+
+<img width="1093" height="807" alt="07" src="https://github.com/user-attachments/assets/49a35919-e7fe-423e-b56a-3e3f724a1f8c" />
+
+---
+
+7. **PASO 7: Finalmente verificamos la pantalla de instalación**
+
+<img width="999" height="630" alt="08" src="https://github.com/user-attachments/assets/0ad00844-8b52-47e0-936e-21b726640929" />
 
 ---
 

@@ -58,13 +58,9 @@ Componentes Implementados
 
 ## 📂 Estructura
 ```bash
-├── app/
-|   └── main.py 
-├── .gitignore
-├── Dockerfile
-├── dockerhub-scout.yml
-├── README.md
-└── requerimientos.txt
+├── .env
+├── docker-compose.yml
+└── README.md
 
 ```
 --- 
